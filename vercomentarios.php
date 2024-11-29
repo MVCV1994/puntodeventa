@@ -32,12 +32,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['eliminar'])) {
 // Obtener los comentarios de la base de datos
 $sql_comentarios = "SELECT * FROM comentarios ORDER BY fecha DESC";
 $result_comentarios = $conexion->query($sql_comentarios);
-
+//esto es informacion para ver si se actualizo github
 ?>
 
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comentarios</title>
