@@ -7,63 +7,97 @@ if (!isset($_SESSION['usuario_rol']) || $_SESSION['usuario_rol'] != 'cajero') {
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Cajero</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
             padding: 20px;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
+
         .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
+            max-width: 600px;
+            width: 100%;
             background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            box-sizing: border-box;
+            /* Incluye padding en el cálculo del ancho */
         }
+
         h1 {
-            text-align: center;
-            color: #007bff; 
+            color: #007bff;
+            margin-bottom: 30px;
         }
-        p {
-            text-align: center;
-            color: #666;
-        }
+
         ul {
             list-style-type: none;
             padding: 0;
         }
+
         li {
             margin: 10px 0;
-            text-align: center; 
         }
+
         a {
-            text-decoration: none;
-            color: #007bff; 
-            font-weight: bold;
-            display: inline-block;
-            padding: 10px;
-            border: 1px solid #007bff;
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            margin: 10px 0;
+            border: none;
             border-radius: 5px;
-            transition: background-color 0.3s, color 0.3s; 
-        }
-        a:hover {
-            background-color: #007bff; 
-            color: white; 
-        }
-        .logout {
+            cursor: pointer;
+            display: block;
+            width: calc(100% - 40px);
+            /* Ajusta el ancho para respetar los márgenes */
+            margin: 10px auto;
+            /* Centra el botón horizontalmente */
             text-align: center;
-            margin-top: 20px;
+            font-size: 18px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            box-sizing: border-box;
         }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+
         .logout a {
-            color: #dc3545; /* Color rojo para el enlace de cerrar sesión */
+            background-color: transparent;
+            color: #cc1421;
+            padding: 12px 20px;
+            margin-top: 20px;
+            border: 2px solid #cc1421;
+            border-radius: 5px;
+            font-size: 18px;
+            text-align: center;
+            display: inline-block;
+            transition: all 0.3s ease;
+            width: calc(100% - 40px);
+            margin: 20px auto;
+            /* Asegura la separación vertical */
+        }
+
+        .logout a:hover {
+            background-color: #910a14;
+            color: white;
             font-weight: bold;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>Bienvenido, Cajero <?php echo $_SESSION['usuario_nombre']; ?></h1>
@@ -77,4 +111,5 @@ if (!isset($_SESSION['usuario_rol']) || $_SESSION['usuario_rol'] != 'cajero') {
         </div>
     </div>
 </body>
+
 </html>
