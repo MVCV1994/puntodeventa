@@ -8,7 +8,7 @@ if (!isset($_SESSION['usuario_rol']) || ($_SESSION['usuario_rol'] != 'cajero' &&
     exit();
 }
 
-// Obtener los productos del carrito desde la base de datos sin filtrar por usuario
+// Obtener los productos del carrito desde la base de datos
 $sql_carrito = "SELECT * FROM carrito";
 $result_carrito = $conexion->query($sql_carrito);
 
